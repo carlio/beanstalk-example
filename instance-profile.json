@@ -1,0 +1,21 @@
+{
+  "InstanceProfile": {
+    "Path": "/",
+    "InstanceProfileName": "beanstalk-example",
+    "Sid": "ECSAccess",
+    "Effect": "Allow",
+    "Action": [
+      "ecs:Poll",
+      "ecs:StartTask",
+      "ecs:StopTask",
+      "ecs:DiscoverPollEndpoint",
+      "ecs:StartTelemetrySession",
+      "ecs:RegisterContainerInstance",
+      "ecs:DeregisterContainerInstance",
+      "ecs:DescribeContainerInstances",
+      "ecs:Submit*",
+      "ecr:AmazonEC2ContainerRegistryReadOnly"
+    ],
+    "Resource": "*"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "AWSEBDockerrunVersion": 1,
+  "containerDefinitions": [
+    {
+      "name": "proxy",
+      "image": "377531193906.dkr.ecr.eu-central-1.amazonaws.com/beanstalk-example:latest",
+      "essential": true,
+      "memory": 200,
+      "cpu": 1,
+      "portMappings": [
+        {
+          "hostPort": 80,
+          "containerPort": 8000,
+          "protocol": "tcp"
+        }
+      ],
+      "links": [
+        "server:server"
+      ]
+    }
+  ]
+}
